@@ -1,0 +1,28 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin: 0;
+	font-family: $sans;
+}
+h1 {
+	color: $mbb_blue;
+
+	a {
+		color: $mbb_blue;
+		text-decoration: none;
+	}
+	a:visited {
+		color: $mbb_blue;
+	}
+}
+h2, h3 {
+	color: $mbb_blue;
+
+	a {
+		color: $mbb_blue;
+	}
+}
+h1.entry-title {margin: 0;}
+.entry-header h1 {
+	margin: 0;
+	text-transform: uppercase;
+}

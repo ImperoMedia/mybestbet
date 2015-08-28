@@ -1,0 +1,32 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+/*Sidebar Menus*/
+.menu-sidebar-pages-container { 
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+.widget-title {
+	font-family: $title;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	color: $color__title;
+}
