@@ -1,3 +1,5 @@
+/***************************Material Design Colors********************/
+
 //Greens
 $turqoise: #1abc9c;
 $greenSea: #16a085;
@@ -47,9 +49,8 @@ $silver: #bdc3c7;
 //Whites
 $clouds: #ecf0f1;
 $paper: #efefef;
-
-$material_blue_700: #1976D2;
-$mbb_blue: $belize;
+$white: #fafafa;
+/***************************Site Colors********************/
 
 $color__background-body: $paper;
 $color__background-screen: #f1f1f1;
@@ -76,3 +77,7 @@ $color__title: $belize;
 $color__main: $belize;
 $color__secondary: $silver;
 $color__contrast: $gunMetal;
+
+$material_blue_700: #1976D2;
+$mbb_blue: $belize;
+$faded_blue: rgba($belize, .2)

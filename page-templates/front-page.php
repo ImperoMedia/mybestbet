@@ -5,12 +5,18 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary-front" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'parts/content', 'home' ); ?>
+				<?php
+					if ( !is_user_logged_in( ) ) {
+					    get_template_part( 'parts/home', 'out' );
+					} else {
+					    get_template_part( 'parts/home', 'in' );
+					}
+				?>
 
 			<?php endwhile; // end of the loop. ?>
 

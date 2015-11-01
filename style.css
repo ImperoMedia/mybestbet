@@ -41,6 +41,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
+/***************************Material Design Colors********************/
+/***************************Site Colors********************/
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Ubuntu:300,400,500,700|Ubuntu+Condensed|Raleway:400,600,500,700,800,900,300|Fjalla+One);
 .site-title {
   font-family: "Ubuntu Condensed";
@@ -58,21 +60,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 /*.full {} Full width class added for header, content and footer - defaults to 100%*/
 .main-page {
-  max-width: 1040px;
+  max-width: 100%;
   margin: 0 auto; }
 
-.inner {
-  padding: 2em 0 0 0; }
+.main-content-area {
+  overflow: hidden; }
 
 #primary {
   float: left;
   width: 66.666666%;
-  padding: 20px; }
+  max-width: 1300px;
+  padding: 3em 10%; }
+
+#primary-front {
+  margin: 0 auto;
+  overflow: hidden; }
 
 #secondary {
   float: left;
   width: 33.33333%;
-  padding: 20px 20px 0 0; }
+  padding: 50px 20px 0 0; }
 
 .pick_block {
   display: block;
@@ -87,17 +94,66 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .pick_content {
   padding: 20px; }
 
-.site-header {
-  margin-left: 40px; }
-  .site-header img {
-    width: 400px;
-    height: auto; }
+.site-header img {
+  width: 400px;
+  height: auto; }
 
 .header-area {
   background: white;
   min-height: 200px;
   border-bottom: 5px solid #607d8b;
   overflow: hidden; }
+
+.site-branding {
+  margin-left: 10%;
+  min-height: 150px; }
+
+#hero {
+  margin-top: -110px;
+  padding-top: 100px;
+  padding-bottom: 180px;
+  background-image: url(http://macbook.local:8080/wordpress/mybestbet/wp-content/uploads/images/sb1-2.jpg) !important;
+  background-position: 50% -45px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%; }
+  #hero .hero_box {
+    margin: 100px auto;
+    max-width: 1300px; }
+  #hero .hero_module_left {
+    height: 100%;
+    padding: 3em 0 0 5em; }
+    #hero .hero_module_left h1 {
+      color: white; }
+    #hero .hero_module_left li {
+      color: white;
+      line-height: 2;
+      margin-top: 10px; }
+      #hero .hero_module_left li i {
+        margin-right: 10px; }
+  #hero .hero_module_right {
+    background-color: rgba(120, 120, 120, 0.33);
+    height: 500px;
+    padding: 2em; }
+    #hero .hero_module_right .inner {
+      padding: 2em;
+      background-color: rgba(120, 120, 120, 0.66);
+      height: 100%; }
+      #hero .hero_module_right .inner p, #hero .hero_module_right .inner h2, #hero .hero_module_right .inner h3, #hero .hero_module_right .inner h4 {
+        color: #fafafa;
+        text-shadow: 1px 1px #000;
+        padding: 5px 10px;
+        margin: 5px 0;
+        max-width: 300px;
+        text-transform: uppercase;
+        font-weight: bold; }
+      #hero .hero_module_right .inner input {
+        margin: 2px 0;
+        padding: 1em 3em; }
+
+div.ws-plugin--s2member-pro-login-widget > form input[type="text"], div.ws-plugin--s2member-pro-login-widget > form input[type="email"], div.ws-plugin--s2member-pro-login-widget > form input[type="password"], div.ws-plugin--s2member-pro-login-widget > form input[type="submit"], div.ws-plugin--s2member-pro-login-widget > form textarea, div.ws-plugin--s2member-pro-login-widget > form select {
+  padding: 10px;
+  max-width: 250px; }
 
 html {
   box-sizing: border-box; }
@@ -1341,7 +1397,10 @@ a {
   display: block;
   float: left;
   width: 100%;
-  margin-top: 20px; }
+  background-color: #2980b9;
+  height: 60px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -1366,23 +1425,52 @@ a {
   .main-navigation li {
     float: left;
     position: relative;
-    padding: 5px 10px;
+    padding: 10px 20px 5px 20px;
     background-color: #2980b9;
-    border: 1px solid white;
-    margin-right: 1px; }
+    line-height: 40px;
+    font-size: 16px; }
     .main-navigation li a {
       color: white; }
-      .main-navigation li a:hover {
-        color: #2980b9;
-        background-color: white; }
-    .main-navigation li:hover > a {
-      color: #2980b9; }
-    .main-navigation li:hover {
-      color: #2980b9;
-      background-color: white; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
+    .main-navigation a:hover:after, .main-navigation a:hover:before {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      border-color: #fff;
+      -webkit-transition: width 150ms ease-in-out;
+              transition: width 150ms ease-in-out;
+      width: 100%; }
+    .main-navigation a:after, .main-navigation a:before {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      border: 1px solid rgba(255, 255, 255, 0);
+      bottom: 0px;
+      content: " ";
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      -webkit-transition: all 180ms ease-in-out;
+              transition: all 180ms ease-in-out;
+      width: 0; }
+    .main-navigation a:hover:after, .main-navigation a:hover:before {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      border-color: #fff;
+      -webkit-transition: width 150ms ease-in-out;
+              transition: width 150ms ease-in-out;
+      width: 100%; }
+    .main-navigation a:hover:before {
+      bottom: auto;
+      top: 0;
+      width: 100%; }
+
+.active .main-navigation ul li a {
+  line-height: 60px; }
+
+.menu-home-navigation-container {
+  max-width: 1300px;
+  margin: 0 auto; }
 
 /* Small menu. */
 .menu-toggle {

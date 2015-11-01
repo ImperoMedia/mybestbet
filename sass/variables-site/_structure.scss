@@ -3,21 +3,26 @@ $size__site-sidebar: 25%;
 
 /*.full {} Full width class added for header, content and footer - defaults to 100%*/
 .main-page {
-	max-width: 1040px;
+	max-width: 100%;
 	margin: 0 auto;
 }
-.inner {
-	padding: 2em 0 0 0;
+.main-content-area {
+	overflow: hidden;
 }
 #primary {
 	float: left;
 	width: 66.666666%;
-	padding: 20px;
+	max-width: 1300px;
+	padding: 3em 10%;
+}
+#primary-front {
+	margin: 0 auto;
+	overflow: hidden;
 }
 #secondary {
 	float: left;
 	width: 33.33333%;
-	padding: 20px 20px 0 0;
+	padding: 50px 20px 0 0;
 }
 .pick_block {
 	display: block;
@@ -35,7 +40,6 @@ $size__site-sidebar: 25%;
 	padding: 20px;
 }
 .site-header {
-	margin-left: 40px;
 	img {
 		width: 400px;
 		height: auto;
@@ -46,4 +50,64 @@ $size__site-sidebar: 25%;
 	min-height: 200px;
 	border-bottom: 5px solid $gunMetal;
 	overflow: hidden;
+}
+.site-branding {
+	margin-left: 10%;
+	min-height: 150px;
+}
+#hero {
+	margin-top: -110px;
+    padding-top: 100px;
+    padding-bottom: 180px;
+    background-image: url(http://macbook.local:8080/wordpress/mybestbet/wp-content/uploads/images/sb1-2.jpg)!important;
+    background-position: 50% -45px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    .hero_box {
+    	margin: 100px auto;
+    	max-width: 1300px;
+    }
+    .hero_module_left {
+    	height: 100%;
+    	padding: 3em 0 0 5em;
+    	h1 {
+    		color: white;
+    	}
+    	li {
+    		color: white;
+    		line-height: 2;
+    		margin-top: 10px;
+    		i {
+    			margin-right: 10px;
+    		}
+    	}
+    }
+    .hero_module_right {
+    	background-color: rgba(120, 120, 120, 0.33);
+    	height: 500px;
+    	padding: 2em;
+    	.inner {
+    		padding: 2em;
+    		background-color: rgba(120, 120, 120, 0.66);
+    		height: 100%;
+	    	p, h2, h3, h4 {
+	    		color: $white;
+	    		text-shadow: 1px 1px #000;
+	    		padding: 5px 10px;
+	    		margin: 5px 0;
+	    		max-width: 300px;
+	    		text-transform: uppercase;
+	    		font-weight: bold;
+	    	}
+	    	input {
+	    			margin: 2px 0;
+	    			padding: 1em 3em;
+	    		}
+	    }
+	}
+}
+div.ws-plugin--s2member-pro-login-widget>form input[type="text"], div.ws-plugin--s2member-pro-login-widget>form input[type="email"], div.ws-plugin--s2member-pro-login-widget>form input[type="password"], div.ws-plugin--s2member-pro-login-widget>form input[type="submit"], div.ws-plugin--s2member-pro-login-widget>form textarea, div.ws-plugin--s2member-pro-login-widget>form select {
+	padding: 10px;
+	max-width: 250px;
 }
