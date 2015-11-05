@@ -5,9 +5,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<h2>Welcome back, <?php echo do_shortcode( '[s2Get constant="S2MEMBER_CURRENT_USER_DISPLAY_NAME" /]' ) ?> - </h2>
+	<h2>Here are your picks for today:</h2>
+
+	<hr>
+
 	<header class="entry-header">
 		<h1>Picks for <?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
+
+	<hr>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -36,8 +43,8 @@
 				</div>
 			<?php } if (current_user_is("s2member_level5")){ ?>
 				<div class="pick_block">
-					<h2>PGA Tour Picks</h2>
-					<p><?php the_field('pga'); ?></p>
+					<h2>Futures Picks</h2>
+					<p><?php the_field('futures'); ?></p>
 				</div>
 			<?php } if (current_user_is("subscriber")){ ?>
 				<div class="pick_block">
@@ -48,19 +55,21 @@
 			<?php } else if(is_user_not_logged_in()) { ?>
 				<div class="pick_block">
 					<h4>Not a Member?</h4>
-					<p>It doesn't look like you are a member. <a href="/register">Click here</a> to sign up.</p>
+					<p>It doesn't look like you are a member. <a href="/register">Click here</a> to sign up. Members log in <a href="http://macbook.local:8080/wordpress/mybestbet/wp-login.php">here</a> or in the sidebar.</p>
 					<?php } ?>
 				</div>
 
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'mybestbet' ),
-				'after'  => '</div>',
-			) );
-		?>
-		<div class="entry-meta">
-			<?php mybestbet_posted_on(); ?>
-		</div><!-- .entry-meta -->
+			<hr>
+
+			<div class="entry-meta">
+				<?php mybestbet_posted_on(); ?>
+			</div><!-- .entry-meta -->
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'mybestbet' ),
+					'after'  => '</div>',
+				) );
+			?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

@@ -3,7 +3,10 @@
 	display: block;
 	float: left;
 	width: 100%;
-	margin-top: 20px;
+	background-color: $mbb_blue;
+	height: 60px;
+	font-family: $title;
+	@include transition(all .5s ease-in-out);
 
 	ul {
 		list-style: none;
@@ -15,7 +18,7 @@
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 1.5em;
+			top: 2em;
 			left: -999em;
 			z-index: 99999;
 
@@ -25,6 +28,8 @@
 			}
 
 			li {
+				background-color: white;
+				color: $mbb_blue;
 				&:hover > ul {
 					left: 100%;
 				}
@@ -48,39 +53,82 @@
 	li {
 		float: left;
 		position: relative;
-		padding: 5px 10px;
-		background-color: $mbb_blue;
-		border: 1px solid white;
-		margin-right: 1px;
+		padding: 10px 20px 5px 20px;
+		// background-color: $mbb_blue;
+		line-height: 40px;
+		font-size: 16px;
 
 		a {
 			color: white;
 
-			&:hover {
-				color: $mbb_blue;
-				background-color: white;
-				;
-			}
+			// &:hover {
+			// 	color: $mbb_blue;
+			// 	background-color: white;
+			// 	;
+			// }
 		}		
 
-		&:hover > a {
-			color: $mbb_blue;
-		}
+		// &:hover > a {
+		// 	color: $mbb_blue;
+		// }
 
-		&:hover {
-			color: $mbb_blue;
-			background-color: white;
-		}
+		// &:hover {
+		// 	color: $mbb_blue;
+		// 	background-color: white;
+		// }
 	}
 	a {
 		display: block;
 		text-decoration: none;
-	}
+			&:hover:after,
+			&:hover:before {
+	 			backface-visibility: hidden;
+	  			border-color: #fff;
+	  			transition: width 150ms ease-in-out;
+	  			width: 100%;
+			}
+			&:after,
+			&:before {
+			  backface-visibility: hidden;
+			  border: 1px solid rgba(#fff, 0);
+			  bottom: 0px;
+			  content: " ";
+			  display: block;
+			  margin: 0 auto;
+			  position: relative;
+			  transition: all 180ms ease-in-out;
+			  width: 0;
+			}
 
+			&:hover:after,
+			&:hover:before {
+			  backface-visibility: hidden;
+			  border-color: #fff;
+			  transition: width 150ms ease-in-out;
+			  width: 100%;
+			}
+
+			&:hover:before {
+			  bottom: auto;
+			  top: 0;
+			  width: 100%;
+			}
+	}
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
 	}
+
+}
+.active {
+	.main-navigation ul li a {
+		line-height: 60px;
+		@include transition(all 0.5s ease-in-out);
+	}
+}
+.menu-home-navigation-container {
+	max-width: $max-width;
+	margin: 0 auto; 
 }
 /* Small menu. */
 .menu-toggle {
