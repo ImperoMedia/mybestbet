@@ -5,7 +5,8 @@
 	width: 100%;
 	background-color: $mbb_blue;
 	height: 60px;
-	@include transition(all 0.3s ease-in-out);
+	font-family: $title;
+	@include transition(all .5s ease-in-out);
 
 	ul {
 		list-style: none;
@@ -17,7 +18,7 @@
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 1.5em;
+			top: 2em;
 			left: -999em;
 			z-index: 99999;
 
@@ -27,6 +28,8 @@
 			}
 
 			li {
+				background-color: white;
+				color: $mbb_blue;
 				&:hover > ul {
 					left: 100%;
 				}
@@ -51,7 +54,7 @@
 		float: left;
 		position: relative;
 		padding: 10px 20px 5px 20px;
-		background-color: $mbb_blue;
+		// background-color: $mbb_blue;
 		line-height: 40px;
 		font-size: 16px;
 
@@ -120,6 +123,7 @@
 .active {
 	.main-navigation ul li a {
 		line-height: 60px;
+		@include transition(all 0.5s ease-in-out);
 	}
 }
 .menu-home-navigation-container {

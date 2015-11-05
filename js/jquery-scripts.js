@@ -38,9 +38,15 @@ jQuery(document).ready(function ($) {
 				"z-index": '9999',
 				height: '120'
 			});
+			$('#nav-toggle-tall').css({
+				display: 'block',
+			});
 		}
 		if($(window).scrollTop() < scrollTop){
-			$('nav').removeAttr('style');	
+			$('nav').removeAttr('style');
+			$('#nav-toggle-tall').css({
+				display: 'none',
+			});
 		}
 	});
   
