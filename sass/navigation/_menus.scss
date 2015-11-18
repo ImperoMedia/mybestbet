@@ -1,24 +1,22 @@
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
 	width: 100%;
-	background-color: $mbb_blue;
-	height: 60px;
+	background-color: rgba(255,255,255,0);
+	margin-top: 60px;
 	font-family: $title;
-	@include transition(all .5s ease-in-out);
+	// overflow: hidden;
+	@include transition(all 400ms ease-in-out);
 
 	ul {
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 		font-size: 14px;
-
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 2em;
+			top: 3em;
 			left: -999em;
 			z-index: 99999;
 
@@ -28,15 +26,18 @@
 			}
 
 			li {
-				background-color: white;
+				background: rgba(255,255,255,.9);
 				color: $mbb_blue;
+				width: 200px;
 				&:hover > ul {
-					left: 100%;
+					left: 0;
 				}
 			}
 
 			a {
 				width: 200px;
+				color: $mbb_blue;
+				background: rgba(255,255,255,.9);
 			}
 
 			:hover > a {
@@ -54,65 +55,36 @@
 		float: left;
 		position: relative;
 		padding: 10px 20px 5px 20px;
-		// background-color: $mbb_blue;
+		// background: rgba(255,255,255,.8);
 		line-height: 40px;
 		font-size: 16px;
 
 		a {
-			color: white;
+			color: $mbb_blue;
+			@include transition(all 100ms ease-in-out);
+			@media screen and (max-width: 768px) {
+				line-height: 2.5;
+			}
 
-			// &:hover {
-			// 	color: $mbb_blue;
-			// 	background-color: white;
-			// 	;
-			// }
+			&:hover {
+				color: #fff;
+				background-color: $mbb_blue;
+				@include transition(all 100ms ease-in-out);
+				;
+			}
 		}		
 
-		// &:hover > a {
-		// 	color: $mbb_blue;
-		// }
+		&:hover > a {
+			color: #fff;
+			background-color: $mbb_blue;
+			@include transition(all 100ms ease-in-out);
+		}
 
-		// &:hover {
-		// 	color: $mbb_blue;
-		// 	background-color: white;
-		// }
-	}
-	a {
-		display: block;
-		text-decoration: none;
-			&:hover:after,
-			&:hover:before {
-	 			backface-visibility: hidden;
-	  			border-color: #fff;
-	  			transition: width 150ms ease-in-out;
-	  			width: 100%;
-			}
-			&:after,
-			&:before {
-			  backface-visibility: hidden;
-			  border: 1px solid rgba(#fff, 0);
-			  bottom: 0px;
-			  content: " ";
-			  display: block;
-			  margin: 0 auto;
-			  position: relative;
-			  transition: all 180ms ease-in-out;
-			  width: 0;
-			}
-
-			&:hover:after,
-			&:hover:before {
-			  backface-visibility: hidden;
-			  border-color: #fff;
-			  transition: width 150ms ease-in-out;
-			  width: 100%;
-			}
-
-			&:hover:before {
-			  bottom: auto;
-			  top: 0;
-			  width: 100%;
-			}
+		&:hover {
+			color: #fff;
+			background-color: $mbb_blue;
+			@include transition(all 100ms ease-in-out);
+		}
 	}
 	.current_page_item > a,
 	.current-menu-item > a,
@@ -122,28 +94,59 @@
 }
 .active {
 	.main-navigation ul li a {
-		line-height: 60px;
-		@include transition(all 0.5s ease-in-out);
+		line-height: 40px;
+		color: $mbb_blue;
+		@include transition(all 150ms ease-in-out);
 	}
 }
-.menu-home-navigation-container {
-	max-width: $max-width;
-	margin: 0 auto; 
-}
-/* Small menu. */
+/* Mobile/Responsive Menu. */
 .menu-toggle {
 	display: none;
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+	.main-navigation {
+		padding: 0 !important;
+		@include transition(all 150ms ease-in-out);
+		li {
+			float: none;
+			padding: 0 15px;
+			border-bottom: 1px solid #ddd;
+			background: rgba(255,255,255,.85);
+		}
+	}
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
 	}
-
 	.main-navigation ul {
 		display: none;
 	}
+}
+.menu-home-navigation-container, .menu-main-navigation-container {
+	margin: 0 auto; 
+}
+.mbb-logo-text-in {
+	font-family: 'sportsworld';
+	font-size: 2rem;
+	left: 85px;
+	position: fixed;
+	text-shadow:   -1px -1px 0 $mbb_blue,  
+				    1px -1px 0 $mbb_blue,
+				    -1px 1px 0 $mbb_blue,
+				     1px 1px 0 $mbb_blue;
+
+	a, a:visited {
+		color: #ddd !important;
+	}
+
+	@include transition(all .5s ease-in-out);
+
+	@media screen and (max-width: 768px) {
+		display: none !important;
+	}
+}
+#nav-toggle-tall li a {
+	color: #bababa !important;
 }
 
 .comment-navigation,

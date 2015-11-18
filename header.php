@@ -23,15 +23,33 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'mybestbet' ); ?></a>
 
 			<header id="masthead" class="site-header inner" role="banner">
-				<div class="site-branding">
-					<h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://macbook.local:8080/wordpress/mybestbet/wp-content/uploads/2015/02/text_logo-no-stroke.png"></a></h2>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				</div><!-- .site-branding -->
+				
+				<div class="mbb_head">
+					<div class="mbb_head_left">
+						<div class="site-branding">
+							<h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://mbb.imperomedia.com/wp-content/uploads/MBB-logo.png"></a></h2>
+							<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+						</div><!-- .site-branding -->
+					</div>
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle nav-btn" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'mybestbet' ); ?></button><ul id="nav-toggle-tall" style="display: none;"><li><a href="/home">MYBESTBETLOGO</a></li></ul>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				</nav><!-- #site-navigation -->
+					<div class="mbb_head_right">
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+							<button class="menu-toggle nav-btn" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'mybestbet' ); ?></button>
+							
+							<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
+							<div id="nav-toggle-tall" style="display: none;">
+								<ul>
+									<li>
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mbb-logo-text-in animated fadeInLeftBig">MBB</a>
+									</li>
+								</ul>
+							</div>
+							
+						</nav><!-- #site-navigation -->
+					</div>
+				</div>
+
 			</header><!-- #masthead -->
 		</div>
 	</div>
