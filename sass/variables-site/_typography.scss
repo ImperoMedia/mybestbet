@@ -19,20 +19,3 @@ $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 $font__title: $title;
 $font__text: $serif;
-
-.site-title {
-	font-family: $title;
-	text-transform: uppercase;
-	color: $color__title;
-
-	a, a:hover, a:visited {
-		color: $color__title;
-	}
-}
-.site-description {
-	font-family: $serif;
-	font-size: 1.5em;
-	font-weight: 300;
-	font-style: italic;
-	margin: 0 0 10px 30px;
-}

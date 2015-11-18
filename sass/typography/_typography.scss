@@ -12,3 +12,11 @@ textarea {
 @import "headings";
 
 @import "copy";
+
+@font-face {
+    font-family: 'sportsworld';
+    src: url('Sports World-Regular.otf'),
+         url('Sports World-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -29,23 +29,49 @@ jQuery(document).ready(function ($) {
 // Fixed Nav
 jQuery(document).ready(function ($) {
 	$(window).scroll(function(){
-		var scrollTop = 142;
+		var scrollTop = 200;
 		if($(window).scrollTop() >= scrollTop){
 			$('nav').css({
 				position : 'fixed',
 				top : '0',
-				"padding-top": '20px',
+				"padding-top": '0px',
 				"z-index": '9999',
-				height: '120'
+				height: '60'
 			});
 			$('#nav-toggle-tall').css({
 				display: 'block',
+				opacity: '1',
+				"max-width" : '1400px',
+				margin: '0 auto'
+			});
+			$('.mbb_head').css({
+				"max-width": '100%'
+			});
+			$('.mbb_head_right').css({
+				width: '100%',
+				"padding-left": '0'
+			});
+			$('.main-navigation').css({
+				"margin-top" : '0',
+				background : 'rgba(255,255,255,.9)',
+				padding: '0 0 0 175px',
+				"max-width": '100%'
 			});
 		}
 		if($(window).scrollTop() < scrollTop){
 			$('nav').removeAttr('style');
 			$('#nav-toggle-tall').css({
 				display: 'none',
+				opacity: '0'
+			});
+			$('.mbb_head').css({
+				"max-width": '1300px'
+			});
+			$('.mbb_head_right').css({
+				width: '75%'
+			});
+			$('.main-navigation').css({
+				margin: '60px 0 0 0'
 			});
 		}
 	});
@@ -56,22 +82,3 @@ jQuery(document).ready(function ($) {
          $(this).addClass('active');
     });
 });
-
-// Registration/Login Tabs
-
-jQuery('document').ready(function ($) {
-				$('#flip-container').quickFlip();
-
-				$('#flip-navigation li a').each(function () {
-					$(this).click(function () {
-						$('#flip-navigation li').each(function () {
-							$(this).removeClass('selected');
-						});
-						$(this).parent().addClass('selected');
-						var flipid = $(this).attr('id').substr(4);
-						$('#flip-container').quickFlipper({}, flipid, 1);
-
-						return false;
-					});
-				});
-			});

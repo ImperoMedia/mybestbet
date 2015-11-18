@@ -12,7 +12,7 @@ get_header(); ?>
 
 			<p>Upgrade your membership to receive premium picks. Choose from one of our many great deals to get instant access to NHL, NBA, NFL, MLB and more.</p>
 
-			<a href="http://macbook.local:8080/wordpress/mybestbet/?page_id=11">Compare membership packages</a>
+			<a href="/membership-options">Compare membership packages</a>
 
 			<hr style="margin: 50px 0;">
 
