@@ -79,8 +79,23 @@ $color__secondary: $silver;
 $color__contrast: $gunMetal;
 
 $material_blue_700: #1976D2;
-$mbb_green: #4CAF50;
-$mbb_orange: #FF5722;
-$mbb_purple: #9C27B0;
-$mbb_blue: $belize;
+$mbb_blue: #2e3192;
 $faded_blue: rgba($belize, .2);
+$mbb_grid_blue: #109cff;
+
+$mbb_orange: #ff9000;
+$mbb_grid_orange: $mbb_orange;
+
+$mbb_green: #4CAF50;
+$mbb_grid_green: $mbb_green;
+
+$mbb_purple: #7716ff;
+$mbb_grid_purple: $mbb_purple;
+
+
+
+
+
+$main: $mbb_blue;
+$contrast: $mbb_orange;
+$light: $clouds;

@@ -42,7 +42,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
+
 @import "mixins/mixins-master";
+@import "elements/media-queries";
 @import "variables-site/variables-site";
 @import "bourbon", "neat";
 
@@ -106,8 +108,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 12.0 Media
 --------------------------------------------------------------*/
 @import "media/media";
-
-/*--------------------------------------------------------------
-13.0 Responsiveness
---------------------------------------------------------------*/
-@import "responsive/media-queries";

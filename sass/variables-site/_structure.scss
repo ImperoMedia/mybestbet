@@ -9,6 +9,25 @@ $size__site-sidebar: 25%;
 .main-content-area {
 	// overflow: hidden;
 }
+.site-title {
+	font-family: $title;
+	text-transform: uppercase;
+	color: $color__title;
+	max-width: 85%;
+	margin: 0 auto;
+
+	a, a:hover, a:visited {
+		color: $color__title;
+	}
+}
+.site-description {
+	font-family: $serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	font-style: italic;
+	margin: 0 0 10px 30px;
+	display: none;
+}
 #primary {
 	float: left;
 	width: 66.666666%;
@@ -64,7 +83,7 @@ $size__site-sidebar: 25%;
 		font-size: 1.4em;
 		font-weight: 600;
 		background-color: $silver;
-		color: $mbb_blue;
+		color: $main;
 		font-family: $title;
 		padding: 20px 0;
 	}
@@ -74,19 +93,47 @@ $size__site-sidebar: 25%;
 }
 .site-header {
 	img {
-		width: 400px;
-		height: auto;
+		@include media("<768px") {
+			margin-bottom: 20px;
+		}
 	}
 }
 .header-area {
-	background: whitesmoke;
-	min-height: 200px;
-	border-bottom: 5px solid $gunMetal;
-	// overflow: hidden;
+	background-color: $light;
+	border-bottom: 5px solid $light;
+	overflow: hidden;
+	display: inline-block;
+	width: 100%;
 }
 .site-branding {
-	margin-left: 10%;
-	min-height: 150px;
+	// min-height: 150px;
+	float: left;
+	width: 100%;
+}
+.mbb_head {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	display: block;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.mbb_head_left {
+	width: 25%;
+	float: left;
+	@include media("<768px") {
+		width: 100%;
+		float: none;
+	}
+}
+.mbb_head_right {
+	width: 75%;
+	float: right;
+	// padding-left: 15px;
+	@include media("<768px") {
+		width: 100% !important;
+		float: none;
+	}
 }
 #hero {
 	margin-top: -110px;
@@ -96,6 +143,7 @@ $size__site-sidebar: 25%;
     background-position: 50% -45px;
     background-repeat: no-repeat;
     background-size: cover;
+    // background: black;
     height: 100%;
     .hero_box {
     	margin: 100px auto;
@@ -122,7 +170,7 @@ $size__site-sidebar: 25%;
     	padding: 2em;
     	.inner {
     		padding: 2em;
-    		background-color: rgba(120, 120, 120, 0.66);
+    		// background-color: rgba(120, 120, 120, 0.66);
     		height: 100%;
 	    	p, h2, h3, h4 {
 	    		color: $white;

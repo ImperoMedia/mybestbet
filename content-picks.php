@@ -21,35 +21,35 @@
 
 		<div class="pick_content">
 
-			<?php if (current_user_is("s2member_level1")){ ?> 
+			<?php if (current_user_can("access_s2member_level0")){ ?> 
+				<div class="pick_block">
+					<h2>Free Pick of the Day</h2>
+					<p><?php the_field('free_pick'); ?></p>
+				</div>
+			<?php elseif (current_user_can("access_s2member_level1")){ ?> 
 				<div class="pick_block">
 					<h2>NHL Picks</h2>
 					<p><?php the_field('nhl'); ?></p>
 				</div>
-			<?php } if (current_user_is("s2member_level2")){ ?>
+			<?php elseif (current_user_can("access_s2member_level2")){ ?> 
 				<div class="pick_block">
 					<h2>NBA Picks</h2>
 					<p><?php the_field('nba'); ?></p>
 				</div>
-			<?php } if (current_user_is("s2member_level3")){ ?>
+			<?php elseif (current_user_can("access_s2member_level3")){ ?> 
 				<div class="pick_block">
 					<h2>MLB Picks</h2>
 					<p><?php the_field('mlb'); ?></p>
 				</div>
-			<?php } if (current_user_is("s2member_level4")){ ?>
+			<?php elseif (current_user_can("access_s2member_level4")){ ?> 
 				<div class="pick_block">
 					<h2>NFL Picks</h2>
 					<p><?php the_field('nfl'); ?></p>
 				</div>
-			<?php } if (current_user_is("s2member_level5")){ ?>
+			<?php elseif (current_user_can("access_s2member_level5")){ ?> 
 				<div class="pick_block">
 					<h2>Futures Picks</h2>
 					<p><?php the_field('futures'); ?></p>
-				</div>
-			<?php } if (current_user_is("subscriber")){ ?>
-				<div class="pick_block">
-					<h2>Free Pick of the Day</h2>
-					<p><?php the_field('free_pick'); ?></p>
 				</div>
 			
 			<?php } else if(is_user_not_logged_in()) { ?>

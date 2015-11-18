@@ -41,13 +41,29 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
+/*  Tablet Layout: 768px. */
+/*  Mobile Layout: 320px. */
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Ubuntu:300,400,500,700|Ubuntu+Condensed|Raleway:400,600,500,700,800,900,300|Fjalla+One);
+@media only screen and (max-width: 767px) {
+  #primary {
+    width: 100%; }
+
+  #secondary {
+    width: 100%; } }
+/*  Wide Mobile Layout: 480px. */
 /***************************Material Design Colors********************/
 /***************************Site Colors********************/
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Ubuntu:300,400,500,700|Ubuntu+Condensed|Raleway:400,600,500,700,800,900,300|Fjalla+One);
+/*.full {} Full width class added for header, content and footer - defaults to 100%*/
+.main-page {
+  max-width: 100%;
+  margin: 0 auto; }
+
 .site-title {
   font-family: "Ubuntu Condensed";
   text-transform: uppercase;
-  color: #2980b9; }
+  color: #2980b9;
+  max-width: 85%;
+  margin: 0 auto; }
   .site-title a, .site-title a:hover, .site-title a:visited {
     color: #2980b9; }
 
@@ -56,12 +72,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   font-size: 1.5em;
   font-weight: 300;
   font-style: italic;
-  margin: 0 0 10px 30px; }
-
-/*.full {} Full width class added for header, content and footer - defaults to 100%*/
-.main-page {
-  max-width: 100%;
-  margin: 0 auto; }
+  margin: 0 0 10px 30px;
+  display: none; }
 
 #primary {
   float: left;
@@ -111,25 +123,51 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     font-size: 1.4em;
     font-weight: 600;
     background-color: #bdc3c7;
-    color: #2980b9;
+    color: #2e3192;
     font-family: "Ubuntu Condensed";
     padding: 20px 0; }
 
 .pick_content {
   padding: 0px; }
 
-.site-header img {
-  width: 400px;
-  height: auto; }
+@media (max-width: 767px) {
+  .site-header img {
+    margin-bottom: 20px; } }
 
 .header-area {
-  background: whitesmoke;
-  min-height: 200px;
-  border-bottom: 5px solid #607d8b; }
+  background-color: #ecf0f1;
+  border-bottom: 5px solid #ecf0f1;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%; }
 
 .site-branding {
-  margin-left: 10%;
-  min-height: 150px; }
+  float: left;
+  width: 100%; }
+
+.mbb_head {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box; }
+
+.mbb_head_left {
+  width: 25%;
+  float: left; }
+  @media (max-width: 767px) {
+    .mbb_head_left {
+      width: 100%;
+      float: none; } }
+
+.mbb_head_right {
+  width: 75%;
+  float: right; }
+  @media (max-width: 767px) {
+    .mbb_head_right {
+      width: 100% !important;
+      float: none; } }
 
 #hero {
   margin-top: -110px;
@@ -160,7 +198,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding: 2em; }
     #hero .hero_module_right .inner {
       padding: 2em;
-      background-color: rgba(120, 120, 120, 0.66);
       height: 100%; }
       #hero .hero_module_right .inner p, #hero .hero_module_right .inner h2, #hero .hero_module_right .inner h3, #hero .hero_module_right .inner h4 {
         color: #fafafa;
@@ -379,17 +416,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway"; }
 
 h1 {
-  color: #2980b9; }
+  color: #2e3192; }
   h1 a {
-    color: #2980b9;
+    color: #2e3192;
     text-decoration: none; }
   h1 a:visited {
-    color: #2980b9; }
+    color: #2e3192; }
 
 h2, h3 {
-  color: #2980b9; }
+  color: #2e3192; }
   h2 a, h3 a {
-    color: #2980b9; }
+    color: #2e3192; }
 
 h1.entry-title {
   margin: 0; }
@@ -437,6 +474,11 @@ mark, ins {
 big {
   font-size: 125%; }
 
+@font-face {
+  font-family: 'sportsworld';
+  src: url("Sports World-Regular.otf"), url("Sports World-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
@@ -584,10 +626,10 @@ table {
 
 /* --------------- */
 #pricing-table .btn-single {
-  box-shadow: inset 0px -2px 0px 0px #3896d3;
-  background-color: #2980b9;
+  box-shadow: inset 0px -2px 0px 0px #39adff;
+  background-color: #109cff;
   text-indent: 0;
-  border: 1px solid #3896d3;
+  border: 1px solid #39adff;
   display: inline-block;
   color: #ffffff;
   font-family: "Ubuntu Condensed";
@@ -602,7 +644,7 @@ table {
   text-shadow: 0px 1px 1px #000;
   padding: 5px; }
 #pricing-table .btn-single:hover {
-  background: #3896d3; }
+  background: #39adff; }
 #pricing-table .btn-single:active {
   position: relative;
   top: 1px; }
@@ -630,10 +672,10 @@ table {
   position: relative;
   top: 1px; }
 #pricing-table .btn-month {
-  box-shadow: inset 0px -2px 0px 0px #ff764b;
-  background-color: #FF5722;
+  box-shadow: inset 0px -2px 0px 0px #ffa229;
+  background-color: #ff9000;
   text-indent: 0;
-  border: 1px solid #ff764b;
+  border: 1px solid #ffa229;
   display: inline-block;
   color: #ffffff;
   font-family: "Ubuntu Condensed";
@@ -648,15 +690,15 @@ table {
   text-shadow: 0px 1px 1px #000;
   padding: 5px; }
 #pricing-table .btn-month:hover {
-  background: #ff764b; }
+  background: #ffa229; }
 #pricing-table .btn-month:active {
   position: relative;
   top: 1px; }
 #pricing-table .btn-season {
-  box-shadow: inset 0px -2px 0px 0px #b92fd1;
-  background-color: #9C27B0;
+  box-shadow: inset 0px -2px 0px 0px #8f3fff;
+  background-color: #7716ff;
   text-indent: 0;
-  border: 1px solid #b92fd1;
+  border: 1px solid #8f3fff;
   display: inline-block;
   color: #ffffff;
   font-family: "Ubuntu Condensed";
@@ -671,7 +713,7 @@ table {
   text-shadow: 0px 1px 1px #000;
   padding: 5px; }
 #pricing-table .btn-season:hover {
-  background: #b92fd1; }
+  background: #8f3fff; }
 #pricing-table .btn-season:active {
   position: relative;
   top: 1px; }
@@ -1594,11 +1636,11 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: #607d8b; }
+  color: #2e3192; }
   a:visited {
-    color: #607d8b; }
+    color: #2e3192; }
   a:hover, a:focus, a:active {
-    color: #7f8c8d; }
+    color: rgba(46, 49, 146, 0.9); }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -1609,14 +1651,12 @@ a {
 --------------------------------------------------------------*/
 .main-navigation {
   clear: both;
-  display: block;
-  float: left;
   width: 100%;
-  background-color: #2980b9;
-  height: 60px;
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 60px;
   font-family: "Ubuntu Condensed";
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -1626,19 +1666,22 @@ a {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
-      top: 2em;
+      top: 3em;
       left: -999em;
       z-index: 99999; }
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
       .main-navigation ul ul li {
-        background-color: white;
-        color: #2980b9; }
-        .main-navigation ul ul li:hover > ul {
-          left: 100%; }
-      .main-navigation ul ul a {
+        background: rgba(255, 255, 255, 0.9);
+        color: #2e3192;
         width: 200px; }
+        .main-navigation ul ul li:hover > ul {
+          left: 0; }
+      .main-navigation ul ul a {
+        width: 200px;
+        color: #2e3192;
+        background: rgba(255, 255, 255, 0.9); }
     .main-navigation ul li:hover > ul {
       left: auto; }
   .main-navigation li {
@@ -1648,61 +1691,75 @@ a {
     line-height: 40px;
     font-size: 16px; }
     .main-navigation li a {
-      color: white; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
-    .main-navigation a:hover:after, .main-navigation a:hover:before {
-      -webkit-backface-visibility: hidden;
-              backface-visibility: hidden;
-      border-color: #fff;
-      -webkit-transition: width 150ms ease-in-out;
-              transition: width 150ms ease-in-out;
-      width: 100%; }
-    .main-navigation a:after, .main-navigation a:before {
-      -webkit-backface-visibility: hidden;
-              backface-visibility: hidden;
-      border: 1px solid rgba(255, 255, 255, 0);
-      bottom: 0px;
-      content: " ";
-      display: block;
-      margin: 0 auto;
-      position: relative;
-      -webkit-transition: all 180ms ease-in-out;
-              transition: all 180ms ease-in-out;
-      width: 0; }
-    .main-navigation a:hover:after, .main-navigation a:hover:before {
-      -webkit-backface-visibility: hidden;
-              backface-visibility: hidden;
-      border-color: #fff;
-      -webkit-transition: width 150ms ease-in-out;
-              transition: width 150ms ease-in-out;
-      width: 100%; }
-    .main-navigation a:hover:before {
-      bottom: auto;
-      top: 0;
-      width: 100%; }
+      color: #2e3192;
+      -webkit-transition: all 100ms ease-in-out;
+      transition: all 100ms ease-in-out; }
+      @media screen and (max-width: 768px) {
+        .main-navigation li a {
+          line-height: 2.5; } }
+      .main-navigation li a:hover {
+        color: #fff;
+        background-color: #2e3192;
+        -webkit-transition: all 100ms ease-in-out;
+        transition: all 100ms ease-in-out; }
+    .main-navigation li:hover > a {
+      color: #fff;
+      background-color: #2e3192;
+      -webkit-transition: all 100ms ease-in-out;
+      transition: all 100ms ease-in-out; }
+    .main-navigation li:hover {
+      color: #fff;
+      background-color: #2e3192;
+      -webkit-transition: all 100ms ease-in-out;
+      transition: all 100ms ease-in-out; }
 
 .active .main-navigation ul li a {
-  line-height: 60px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
+  line-height: 40px;
+  color: #2e3192;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out; }
 
-.menu-home-navigation-container {
-  max-width: 1300px;
-  margin: 0 auto; }
-
-/* Small menu. */
+/* Mobile/Responsive Menu. */
 .menu-toggle {
   display: none; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+  .main-navigation {
+    padding: 0 !important;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out; }
+    .main-navigation li {
+      float: none;
+      padding: 0 15px;
+      border-bottom: 1px solid #ddd;
+      background: rgba(255, 255, 255, 0.85); }
+
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block; }
 
   .main-navigation ul {
     display: none; } }
+.menu-home-navigation-container, .menu-main-navigation-container {
+  margin: 0 auto; }
+
+.mbb-logo-text-in {
+  font-family: 'sportsworld';
+  font-size: 2rem;
+  left: 85px;
+  position: fixed;
+  text-shadow: -1px -1px 0 #2e3192, 1px -1px 0 #2e3192, -1px 1px 0 #2e3192, 1px 1px 0 #2e3192;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  .mbb-logo-text-in a, .mbb-logo-text-in a:visited {
+    color: #ddd !important; }
+  @media screen and (max-width: 768px) {
+    .mbb-logo-text-in {
+      display: none !important; } }
+
+#nav-toggle-tall li a {
+  color: #bababa !important; }
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -1719,6 +1776,22 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  border: 1px solid white;
+  border-radius: 3px;
+  background: #2e3192;
+  box-shadow: none;
+  color: #fff;
+  font-size: 14px;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 1em 2em .75em;
+  margin: 0 auto;
+  width: 100%; }
+  button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+    background-color: rgba(46, 49, 146, 0.9);
+    box-shadow: none; }
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -1966,16 +2039,3 @@ object {
 
 .gallery-caption {
   display: block; }
-
-/*--------------------------------------------------------------
-13.0 Responsiveness
---------------------------------------------------------------*/
-/*  Tablet Layout: 768px. */
-/*  Mobile Layout: 320px. */
-@media only screen and (max-width: 767px) {
-  #primary {
-    width: 100%; }
-
-  #secondary {
-    width: 100%; } }
-/*  Wide Mobile Layout: 480px. */
