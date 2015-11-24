@@ -25,3 +25,31 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+
+.hero_module_right {
+	.inner {
+    	input {
+    			margin: 6px 0;
+    			padding: 1em;
+    		}
+    }
+}
+
+div.ws-plugin--s2member-pro-login-widget>form input[type="text"], 
+div.ws-plugin--s2member-pro-login-widget>form input[type="email"], 
+div.ws-plugin--s2member-pro-login-widget>form input[type="password"], 
+div.ws-plugin--s2member-pro-login-widget>form input[type="submit"], 
+div.ws-plugin--s2member-pro-login-widget>form textarea, 
+div.ws-plugin--s2member-pro-login-widget>form select {
+	padding: 10px;
+	max-width: 250px;
+}
+.ws-plugin--s2member-pro-login-widget {
+	color: $dark;
+	a {
+		color: $dark !important;
+	}
+	.ws-plugin--s2member-pro-login-widget-lost-password {
+		margin: 10px 0;
+	}
+}
