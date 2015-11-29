@@ -145,9 +145,10 @@ $max-width: 1500px;
     background-repeat: no-repeat;
     background-size: cover;
     background: #aaa;
-    background-color: #2e3192;
-		@include filter-gradient(#2e3192, #64b5f6, horizontal);
-		@include background-image(linear-gradient(left,  #2e3192 0%,#1976d2 46%,#64b5f6 100%));
+	background: -moz-linear-gradient(left, $grad-dark 0%, $grad-med 46%, $grad-light 100%);
+	background: -webkit-linear-gradient(left, $grad-dark 0%,$grad-med 46%, $grad-light 100%);
+	background: linear-gradient(to right, $grad-dark 0%,$grad-med 46%, $grad-light 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$grad-dark', endColorstr='$grad-light',GradientType=1 );
 
     height: 100%;
     max-width: $max-width;
@@ -225,7 +226,7 @@ $max-width: 1500px;
 	margin: 0 auto;
 	min-height: 350px;
 	text-align: center;
-	padding: 100px 0;
+	padding: 50px 0;
 	h2 {
 		font-size: 3rem;
 	}

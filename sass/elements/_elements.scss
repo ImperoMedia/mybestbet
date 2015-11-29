@@ -63,23 +63,15 @@ img {
 	top: -13px;
 	border-width: 3px;
 	padding: 30px 20px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
 	border-radius: 5px;
-	-moz-box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
-	-webkit-box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
 	box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);    
 }
 
 #pricing-table .plan:nth-child(1) {
-	-moz-border-radius: 5px 0 0 5px;
-	-webkit-border-radius: 5px 0 0 5px;
 	border-radius: 5px 0 0 5px;        
 }
 
 #pricing-table .plan:nth-child(4) {
-	-moz-border-radius: 0 5px 5px 0;
-	-webkit-border-radius: 0 5px 5px 0;
 	border-radius: 0 5px 5px 0;        
 }
 
@@ -88,7 +80,7 @@ img {
 #pricing-table h3 {
 	font-family: $title;
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 2.25rem;
 	font-weight: normal;
 	padding: 20px;
 	margin: -20px -20px 50px -20px;
@@ -111,9 +103,7 @@ img {
 	background-image: linear-gradient(#eee, #ddd);
 	margin-top: -30px;
 	padding-top: 30px;
-	-moz-border-radius: 5px 5px 0 0;
-	-webkit-border-radius: 5px 5px 0 0;
-	border-radius: 5px 5px 0 0; 		
+	border-radius: 5px 5px 0 0; 
 }
 
 #pricing-table .plan:nth-child(1) h3 {
@@ -135,14 +125,14 @@ img {
 	line-height: 140px;
 	font-weight: 300;
 	text-transform: none;
-	color: #777;
-	background: #fff;
+	color: $white;
+	background: $mbb_blue;
 	border: 5px solid #fff;
 	height: 150px;
 	width: 150px;
 	margin: 10px auto -50px;
 	border-radius: 150px;
-	box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+	// box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
 }
 
 /* --------------- */
@@ -154,18 +144,20 @@ img {
 }
 
 #pricing-table li {
-	border-top: 1px solid #ddd;
+	border-top: 1px solid #eee;
 	padding: 10px 0;
+	color: $mbb_blue;
+	font-size: 1.1rem;
 }
 
 /* --------------- */
 
 #pricing-table {
 	.btn-single {
-		box-shadow:inset 0px -2px 0px 0px lighten($mbb_grid_blue, 8);
-		background-color: $mbb_grid_blue;
+		box-shadow:inset 0px -2px 0px 0px lighten($mbb_grid_green, 8);
+		background-color: $mbb_grid_green;
 		text-indent: 0;
-		border: 1px solid lighten($mbb_grid_blue, 8);
+		border: 1px solid lighten($mbb_grid_green, 8);
 		display: inline-block;
 		color: #ffffff;
 		font-family: $title;
@@ -177,11 +169,12 @@ img {
 		width: 150px;
 		text-decoration: none;
 		text-align: center;
-		text-shadow: 0px 1px 1px #000;
+		text-shadow: 0px 1px 1px #333;
 		padding: 5px;
+		border-radius: 5px;
 	}
 	.btn-single:hover {
-		background: lighten($mbb_grid_blue, 8);
+		background: lighten($mbb_grid_green, 8);
 	}.btn-single:active {
 		position:relative;
 		top:1px;

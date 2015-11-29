@@ -22,11 +22,11 @@
 			<div class="col-xs-12 col-sm-6 col-md-5 hero_module hero_module_right">
 				<div class="inner">
 					<h2>Welcome back, <?php echo do_shortcode( '[s2Get constant="S2MEMBER_CURRENT_USER_DISPLAY_NAME" /]' ) ?></h2>
-					<h2>Sign Up for Free!</h2>
 
 					<!--Don't Use h3 tags in this box. They will be hidden to accommodate S2 widget title-->
 					
-					<h4>Upgrade to Premium for all picks</h4>
+					<a href="#">See Your Picks</a>
+					<a href="#">Upgrade for more picks</a>
 
 					<?php echo s2member_pro_login_widget(); ?>
 				</div>
@@ -44,45 +44,63 @@
 
 <section id="third">
 
-	<div class="row">
+	<div id="pricing" class="row">
 		<div id="pricing-table" class="clear">
 		    <div class="plan">
-		        <h3><?php the_field('sport_1') ;?><span>From $30</span></h3>
+		        <h3><?php the_field('sport_1') ;?>
+		        	<span>$20/DAY</span>
+	        	</h3>
+		        
 		         <ul>
-		            <li><a class="btn-single" href="<?php the_field('sport_1_1_day') ;?>"><b>1</b> Day Pass</a></li>
-		            <li><a class="btn-week" href="<?php the_field('sport_1_7_day') ;?>"><b>7</b> Day Pass</a></li>
-		            <li><a class="btn-month" href="<?php the_field('sport_1_30_day') ;?>"><b>30</b> Day Pass</a></li>
-					<li><a class="btn-season" href="<?php the_field('sport_1_season') ;?>"><b>Season</b> Pass</a></li>
+		            <li>Access to Today's Top Pick</li>
+		            <li>&nbsp;</li>
+		            <li><a href="" class="btn-single">Buy Now</a></li>
+		            <li><?php echo do_shortcode('[s2Member-PayPal-Button level="1" ccaps="" desc="Single Membership / description and pricing details here." ps="paypal" lc="" cc="USD" dg="0" ns="1" custom="macbook.local:8080" ta="0" tp="0" tt="D" ra="20" rp="1" rt="D" rr="BN" rrt="" rra="1" image="default" output="button" /]'); ?></li>
+
 		        </ul>  
+
 		    </div>
 		    <div class="plan">
-		        <h3><?php the_field('sport_2') ;?><span>From $30</span></h3>
+		        <h3><?php the_field('sport_2') ;?>
+		        	<span>$25/DAY</span>
+	        	</h3>
+		        
 		        <ul>
-		            <li><a class="btn-single" href="<?php the_field('sport_2_1_day') ;?>"><b>1</b> Day Pass</a></li>
-		            <li><a class="btn-week" href="<?php the_field('sport_2_7_day') ;?>"><b>7</b> Day Pass</a></li>
-		            <li><a class="btn-month" href="<?php the_field('sport_2_30_day') ;?>"><b>30</b> Day Pass</a></li>
-					<li><a class="btn-season" href="<?php the_field('sport_2_season') ;?>"><b>Season</b> Pass</a></li>
+		            <li>Add a second pick for just $5!</li>
+		            <li>&nbsp;</li>
+		            <li><a href="" class="btn-single">Buy Now</a></li>
+
 		        </ul>    
+
+		    </div>
+		    <div id="most-popular" class="plan">
+		        <h3><?php the_field('sport_3') ;?>
+		        	<span>$30/DAY</span>
+	        	</h3>
+		        
+		         <ul>
+		            <li>Our most popular plan</li>
+		            <li>All 3 picks for one low price!</li>
+		            <li><a href="" class="btn-single">Buy Now</a></li>
+		        </ul>  
+
 		    </div>
 		    <div class="plan">
-		        <h3><?php the_field('sport_3') ;?><span>From $20</span></h3>
+		        <h3><?php the_field('sport_4') ;?>
+		        	<span>$XXX/MO</span>
+	        	</h3>
+		        
 		         <ul>
-		            <li><a class="btn-single" href="<?php the_field('sport_3_1_day') ;?>"><b>1</b> Day Pass</a></li>
-		            <li><a class="btn-week" href="<?php the_field('sport_3_7_day') ;?>"><b>7</b> Day Pass</a></li>
-		            <li><a class="btn-month" href="<?php the_field('sport_3_30_day') ;?>"><b>30</b> Day Pass</a></li>
-					<li><a class="btn-season" href="<?php the_field('sport_3_season') ;?>"><b>Season</b> Pass</a></li>
+		            <li>Access to all picks, all the time!</li>
+		            <li>&nbsp;</li>
+		            <li><a href="" class="btn-single">Buy Now</a></li>
+
 		        </ul>  
-		    </div>
-		    <div class="plan">
-		        <h3><?php the_field('sport_4') ;?><span>From $30</span></h3>
-		         <ul>
-		            <li><a class="btn-single" href="<?php the_field('sport_4_1_day') ;?>"><b>1</b> Day Pass</a></li>
-		            <li><a class="btn-week" href="<?php the_field('sport_4_7_day') ;?>"><b>7</b> Day Pass</a></li>
-		            <li><a class="btn-month" href="<?php the_field('sport_4_30_day') ;?>"><b>30</b> Day Pass</a></li>
-					<li><a class="btn-season" href="<?php the_field('sport_4_season') ;?>"><b>Season</b> Pass</a></li>
-		        </ul>  
+
 		    </div> 	
 		</div>
 	</div>
+
+
 
 </section>
